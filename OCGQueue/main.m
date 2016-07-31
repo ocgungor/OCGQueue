@@ -7,11 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "OCGQueue.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
-        NSLog(@"Hello, World!");
+        OCGQueue *queue = [OCGQueue queueWithObjects:@"ocg", @"booka", nil];
+        [queue pushObject:@"hello"];
+        [queue pushObject:@"there"];
+        
+        NSLog(@"Hello, World!, %@", [queue peekObject]);
+        NSLog(@"Hello, World!, %@", [queue popObject]);
+        NSLog(@"Hello, World!, %@", queue);
     }
     return 0;
 }

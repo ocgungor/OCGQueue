@@ -83,5 +83,12 @@
     return self.elements.count == 0;
 }
 
+- (NSString *)description {
+    NSMutableString *description = [NSMutableString stringWithFormat:@"<%@: ", NSStringFromClass([self class])];
+    [description appendFormat:@"queue.elements=%@", self.elements];
+    [description appendString:@">"];
+    return description;
+}
+
 
 @end

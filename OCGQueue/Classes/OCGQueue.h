@@ -50,4 +50,6 @@
 
 - (id)peekObject;
 
+- (NSString *)description;
+
 @end
