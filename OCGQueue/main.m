@@ -11,13 +11,14 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
         OCGQueue *queue = [OCGQueue queueWithObjects:@"ocg", @"booka", nil];
         [queue pushObject:@"hello"];
         [queue pushObject:@"there"];
         
         NSLog(@"%@", [queue peekObject]);
         NSLog(@"%@", [queue popObject]);
+        NSLog(@"%@", queue);
+        [queue swapTopMostObjects];
         NSLog(@"%@", queue);
     }
     return 0;

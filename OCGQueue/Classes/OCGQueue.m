@@ -79,6 +79,10 @@
     return self.elements[0];
 }
 
+- (void)swapTopMostObjects {
+    [self.elements exchangeObjectAtIndex:0 withObjectAtIndex:1];
+}
+
 - (BOOL)isEmpty {
     return self.elements.count == 0;
 }

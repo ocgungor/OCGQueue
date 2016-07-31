@@ -50,6 +50,6 @@
 
 - (id)peekObject;
 
-- (NSString *)description;
+- (void)swapTopMostObjects;
 
 @end
