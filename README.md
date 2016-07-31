@@ -45,7 +45,7 @@ OCGQueue *queue = [[OCGQueue alloc] init];
 **Swap the two objects at the beginning of your queue**
 
 ```
-[queue popObject];
+[queue swapTopMostObjects];
 ```
 
 **Check if your queue is empty**
