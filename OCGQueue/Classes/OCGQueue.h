@@ -38,4 +38,9 @@
 
 
 @interface OCGQueue : NSObject
+
++ (instancetype)queueWithObjects:(id)obj, ...;
+
+- (void)pushObject:(id)object;
+
 @end

@@ -44,8 +44,8 @@
 		130F3F5E938DB048C4E8DAC1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				130F3BB58F3CC10F1B67E752 /* OCGQueue.m */,
 				130F3241476BF99AF74462F3 /* OCGQueue.h */,
+				130F3BB58F3CC10F1B67E752 /* OCGQueue.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -253,6 +253,7 @@
 				56E507B91D4D9ED4001E058F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

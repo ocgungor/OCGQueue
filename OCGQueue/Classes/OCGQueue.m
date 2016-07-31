@@ -36,8 +36,37 @@
 
 #import "OCGQueue.h"
 
+@interface OCGQueue()
+@property(nonatomic) NSMutableArray *elements;
+@end
 
-@implementation OCGQueue {
+@implementation OCGQueue
 
++ (instancetype)queueWithObjects:(id)obj, ... {
+    OCGQueue *queue = [[self alloc] init];
+
+    va_list ap;
+    va_start(ap, obj);
+    while (obj) {
+        [queue.elements addObject: obj];
+        obj = va_arg(ap, id);
+    }
+    va_end(ap);
+
+    return queue;
 }
+
+- (instancetype)init {
+    if (!(self = [super init]))
+        return nil;
+    if (!(self.elements = [NSMutableArray new])) {
+        return nil;
+    }
+    return self;
+}
+
+- (void)pushObject:(id)object {
+    [self.elements addObject:object];
+}
+
 @end
