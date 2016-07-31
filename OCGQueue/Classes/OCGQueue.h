@@ -39,8 +39,15 @@
 
 @interface OCGQueue : NSObject
 
-+ (instancetype)queueWithObjects:(id)obj, ...;
+@property(nonatomic, readonly, getter=isEmpty) BOOL empty;
+
+
++ (instancetype)queueWithObjects:(id)obj, ... NS_REQUIRES_NIL_TERMINATION;
 
 - (void)pushObject:(id)object;
+
+- (id)popObject;
+
+- (id)peekObject;
 
 @end

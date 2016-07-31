@@ -69,4 +69,19 @@
     [self.elements addObject:object];
 }
 
+- (id)popObject {
+    id object = [self peekObject];
+    [self.elements removeObjectAtIndex:0];
+    return object;
+}
+
+- (id)peekObject {
+    return self.elements[0];
+}
+
+- (BOOL)isEmpty {
+    return self.elements.count == 0;
+}
+
+
 @end
