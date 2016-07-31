@@ -16,9 +16,9 @@ int main(int argc, const char * argv[]) {
         [queue pushObject:@"hello"];
         [queue pushObject:@"there"];
         
-        NSLog(@"Hello, World!, %@", [queue peekObject]);
-        NSLog(@"Hello, World!, %@", [queue popObject]);
-        NSLog(@"Hello, World!, %@", queue);
+        NSLog(@"%@", [queue peekObject]);
+        NSLog(@"%@", [queue popObject]);
+        NSLog(@"%@", queue);
     }
     return 0;
 }
