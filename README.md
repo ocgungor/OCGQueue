@@ -14,39 +14,42 @@ Based on https://en.wikipedia.org/wiki/Queue_(abstract_data_type)
 **Init**
 
 ```
-    OCGQueue *queue = [OCGQueue queueWithObjects:@"ocg", @"booka", nil];
+OCGQueue *queue = [OCGQueue queueWithObjects:@"ocg", @"booka", nil];
     
     OR
-    
-    OCGQueue *queue = [[OCGQueue alloc] init];
+
+OCGQueue *queue = [[OCGQueue alloc] init];
 ```
+
 
 **Add objects to your queue**
 
 ```
-      [queue pushObject:@"hello world"];
+[queue pushObject:@"hello world"];
 ```
 
-**Retrieve your object at the beginning of your queue without removing it **
+**Retrieve your object at the beginning of your queue without removing it**
+
 
 ```
-      [queue peekObject];
+[queue peekObject];
 ```
 
-**Retrieve your object at the beginning of your queue **
+
+**Retrieve your object at the beginning of your queue**
 
 ```
-      [queue popObject];
+[queue popObject];
 ```
 
-**Swap the two objects at the beginning of your queue **
+**Swap the two objects at the beginning of your queue**
 
 ```
-      [queue popObject];
+[queue popObject];
 ```
 
-**Check if your queue is empty **
+**Check if your queue is empty**
 
 ```
-      queue.isEmpty;
+queue.isEmpty;
 ```
